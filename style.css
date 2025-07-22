@@ -1,0 +1,142 @@
+/* Estilos gerais e paleta de cores "kawaii" */
+:root {
+    --cor-fundo: #fff0f5; /* Rosa bem clarinho */
+    --cor-principal: #ffb6c1; /* Rosa claro */
+    --cor-destaque: #ff69b4; /* Rosa mais forte */
+    --cor-texto: #5c5c5c;
+    --cor-borda: #ffd1dc;
+    --fonte-titulo: 'Mochiy Pop One', sans-serif;
+    --fonte-corpo: 'Quicksand', sans-serif;
+}
+
+/* --- NOVO FUNDO COM BORDA HELLO KITTY --- */
+body {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-texto);
+    margin: 0;
+    
+    /* Cor de fundo que aparecerá atrás da imagem */
+    background-color: var(--cor-fundo);
+    
+    /* Imagem de borda que se repete */
+    background-image: url('hello-kitty-border.png');
+    background-repeat: repeat; /* Repete a imagem em toda a tela */
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* --- CABEÇALHO ATUALIZADO --- */
+header {
+    background-color: var(--cor-principal);
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+header h1 {
+    font-family: var(--fonte-titulo);
+    color: white;
+    margin: 0;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* --- FIM DAS ATUALIZAÇÕES --- */
+
+.container {
+    max-width: 800px;
+    /* Adicionamos margem para o conteúdo não ficar colado no topo */
+    margin: 20px auto; 
+    padding: 20px;
+    flex: 1;
+    /* Fundo branco no container principal para a leitura ficar fácil */
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+}
+
+.menu-dias {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu-dias button {
+    font-family: var(--fonte-corpo);
+    font-weight: 700;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: 2px solid var(--cor-borda);
+    border-radius: 25px;
+    background-color: white;
+    color: var(--cor-destaque);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-dias button:hover {
+    background-color: var(--cor-principal);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-dias button.active {
+    background-color: var(--cor-destaque);
+    color: white;
+    border-color: var(--cor-destaque);
+}
+
+.cardapio {
+    background-color: white;
+    border: 2px dashed var(--cor-borda);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.cardapio h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-destaque);
+    margin-top: 0;
+    text-align: center;
+    border-bottom: 2px solid var(--cor-borda);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.cardapio ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cardapio li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1.1em;
+}
+
+.cardapio li:last-child {
+    border-bottom: none;
+}
+
+.cardapio li strong {
+    color: var(--cor-principal);
+    font-weight: 700;
+}
+
+footer {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 15px;
+    margin-top: auto;
+    font-weight: 500;
+    width: 100%;
+    box-sizing: border-box;
+}
